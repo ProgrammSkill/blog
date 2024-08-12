@@ -59,3 +59,34 @@
 - реализация дополнительного функционала за пределами указанного ТЗ
 - использование сериализаторов/десериализаторов
 - использование миграций
+
+Инструкции:
+
+Путь к Seagger документации: http://127.0.0.1:8000/docs/
+
+![image](https://github.com/user-attachments/assets/fc1c6aa9-9d1c-47b6-8c1f-43eb71a8bd58)
+
+Регистрация пользователя: http://127.0.0.1:8000/docs/#/api/api_register_create
+
+![image](https://github.com/user-attachments/assets/fdca21a1-083e-4702-b265-fb9db4f6155e)
+
+Авторизация пользователя: http://127.0.0.1:8000/docs/#/api/api_token_create
+Авторизация реализована методом JVT токена
+
+![image](https://github.com/user-attachments/assets/cebb5352-164c-438c-b2ec-c1548103d433)
+
+Просмотр постов: http://127.0.0.1:8000/docs/#/api/api_post_list
+Создание постов: http://127.0.0.1:8000/docs/#/api/api_post_create_create
+Удаление поста: http://127.0.0.1:8000/docs/#/api/api_post_destroy
+Редактирование поста: http://127.0.0.1:8000/docs/#/api/api_post_update
+
+Поставить лайк посту: http://127.0.0.1:8000/docs/#/api/api_posts_like_create
+
+![image](https://github.com/user-attachments/assets/7b9955c0-d543-46e6-a957-2fdb20b68992)
+
+Убрать лайк: http://127.0.0.1:8000/docs/#/api/api_posts_unlike_destroy
+
+![image](https://github.com/user-attachments/assets/bee1c096-c35d-4f6b-af0d-1ddafe3bb6e1)
+
+
+
