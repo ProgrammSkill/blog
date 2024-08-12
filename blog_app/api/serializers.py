@@ -39,11 +39,11 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Like
-        fields = ('post', 'user')
+        fields = ('user', )
 
     def validate(self, attrs):
         user = self.context['request'].user
-        post = attrs.get('post')
+        post = self.context['request'].parser_context['kwargs'].get('post')
 
         # Проверяем, существует ли уже лайк от этого пользователя на этот пост
         if Like.objects.filter(user=user, post=post).exists():

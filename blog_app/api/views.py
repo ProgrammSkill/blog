@@ -58,15 +58,17 @@ class PostView(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Generi
             raise ValidationError({"detail": "У вас нет прав для удаления этой статьи."})
         instance.delete()
 
+
 class LikePostView(generics.CreateAPIView):
     queryset = Like.objects.all()
     serializer_class = LikeSerializer
     permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
-        post_id = self.request.data.get('post')
+        post_id = self.kwargs.get('post_id')
         post = Post.objects.get(id=post_id)
         serializer.save(user=self.request.user, post=post)
+
 
 
 class UnlikePostView(generics.DestroyAPIView):
