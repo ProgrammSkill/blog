@@ -88,5 +88,8 @@
 
 ![image](https://github.com/user-attachments/assets/bee1c096-c35d-4f6b-af0d-1ddafe3bb6e1)
 
+Просмотр страница списка постов с их лайками: http://127.0.0.1:8000/list-posts/
+
+![image](https://github.com/user-attachments/assets/1cdf487e-ad10-48b1-9ade-04cf6475f699)
 
 
