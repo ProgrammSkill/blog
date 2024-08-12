@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  blog_db:
+    container_name: blog_db
+    image: postgres:15.0
+    restart: always
+    env_file:
+      - ./.env
+  blog:
+    container_name: blog
+    build: .
+    ports:
+      - "4001:4001"
+    command: sh -c "gunicorn blog.wsgi:application --bind 0.0.0.0:4001"
+    restart: always
+    env_file:
+      - ./.env
+    depends_on:
+      - blog_db
+    volumes:
+      - .:/app/

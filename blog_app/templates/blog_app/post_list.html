@@ -1,0 +1,25 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список постов</title>
+</head>
+<body>
+    <h1>Список постов</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <p>Автор: {{ post.author.username }}</p>
+                <p>Дата публикации: {{ post.published_date }}</p>
+                <p>Лайки: {{ post_likes|get_value:post.id }}</p>
+            </li>
+        {% empty %}
+            <li>Посты отсутствуют.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
