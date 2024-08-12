@@ -69,8 +69,6 @@ class LikePostView(generics.CreateAPIView):
         post = Post.objects.get(id=post_id)
         serializer.save(user=self.request.user, post=post)
 
-        return Response({'message': 'Лайк поставлен'})
-
 
 class UnlikePostView(generics.DestroyAPIView):
     queryset = Like.objects.all()
