@@ -38,6 +38,7 @@ python manage.py runserver
 ![image](https://github.com/user-attachments/assets/cb2a8300-4264-49ad-9105-42b7c21a4cd2)
 
 В директории проекта обязательно должен быть .env файл с его данными
+
 SECRET_KEY=django-insecure-c8ks=^kwx@nttgd7q1hhdd+%+oja7rxt^#nmdsz#$le4xi-byf
 
 POSTGRES_DB=blog_db
